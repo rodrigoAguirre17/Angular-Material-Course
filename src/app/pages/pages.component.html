@@ -1,18 +1,18 @@
 <mat-sidenav-container class="sidenav-container"><!--hasBackdrop="false" -->
 	<mat-sidenav class="mainnav" mode="side" #mainnav opened>
 		<mat-toolbar class="toolbar">
-			<span>Menu</span>
+			<span>Closet KAM</span>
 		</mat-toolbar>
 		<mat-nav-list role="list">
 			<mat-list-item>
-				<mat-icon matListItemIcon>dashboard</mat-icon>
-				<a matListItemTitle routerLink="">Dashboard</a>
+				<mat-icon matListItemIcon>favorite_border</mat-icon>
+				<a matListItemTitle routerLink="">Favoritos</a>
 			</mat-list-item>
 			<mat-list-item>
 				<mat-icon matListItemIcon>contact_mail</mat-icon>
 				<a matListItemTitle routerLink="/contact">Contact Us</a>
 			</mat-list-item>
-			<mat-list-item>
+			<!-- <mat-list-item>
 				<mat-icon matListItemIcon>person</mat-icon>
 				<a matListItemTitle routerLink="/user">User Profile Manager</a>
 			</mat-list-item>
@@ -23,7 +23,7 @@
 			<mat-list-item>
 				<mat-icon matListItemIcon>task</mat-icon>
 				<a matListItemTitle routerLink="/kanban">Kanban Board Mini</a>
-			</mat-list-item>
+			</mat-list-item> -->
 		</mat-nav-list>
 	</mat-sidenav>
 	<mat-sidenav mode="over" #setting position="end">
@@ -69,12 +69,12 @@
 
 		<!-- <mat-progress-spinner mode="determinate" value="50"></mat-progress-spinner> -->
 		<mat-toolbar class="toolbar">
-			<button mat-mini-fab (click)="mainnav.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
+			<button mat-mini-fab class="button-toggle" (click)="mainnav.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
 				<mat-icon>menu</mat-icon>
 			</button>
 			<span class="toolbar-title">{{ breadcrumb }}</span>
 			<span class="spacer"></span>
-			<button mat-mini-fab (click)="setting.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
+			<button class="toolbar-title-opt" mat-mini-fab (click)="setting.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
 				<mat-icon>tune</mat-icon>
 			</button>
 		</mat-toolbar>

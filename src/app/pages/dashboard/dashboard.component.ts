@@ -13,11 +13,26 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-
-  private breakpointObserver = inject(BreakpointObserver);
-
-  readonly col$ = this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall, Breakpoints.Medium]).pipe(
-    map(state => state.matches ? 1 : 2)
-  );
-
+productos = [
+  {
+    nombre: 'Outfit 1',
+    fecha: '23/05/2026',
+    imagen: 'assets/img/outfit1.png'
+  },
+  {
+    nombre: 'Outfit 2',
+    fecha: '24/05/2026',
+    imagen: 'assets/img/outfit2.png'
+  },
+  {
+    nombre: 'Outfit 3',
+    fecha: '25/05/2026',
+    imagen: 'assets/img/outfit3.png'
+  },
+  {
+    nombre: 'Outfit 4',
+    fecha: '25/05/2026',
+    imagen: 'assets/img/outfit4.png'
+  }
+];
 }
